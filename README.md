@@ -1,96 +1,52 @@
 # 🛒 E-Commerce Customer Churn Analysis
 
-> **MySQL | SQL Data Cleaning | Data Transformation | Business Analysis**
+### MySQL | SQL | Data Cleaning | Data Transformation | Customer Analytics
 
-An end-to-end SQL project focused on analyzing customer churn in an e-commerce environment.  
-The project demonstrates how raw customer data can be cleaned, transformed, analyzed, and combined with return information using relational SQL operations.
+An end-to-end MySQL project for cleaning, transforming and analyzing an E-Commerce Customer Churn dataset using SQL.
+
+The project covers the complete workflow from raw customer data preparation to business-oriented analysis, customer return integration, relational JOIN operations and final database verification.
 
 ---
 
 ## 📌 Project Overview
 
-Customer churn is an important business problem in e-commerce, as customer attrition can affect customer satisfaction and long-term business performance.
+Customer churn is an important problem in the e-commerce industry because losing existing customers can affect customer satisfaction, customer retention and long-term business performance.
 
-This project uses **MySQL** to analyze an E-Commerce Customer Churn dataset and explore patterns related to:
+This project uses **MySQL and SQL** to analyze customer-related data and identify patterns associated with:
 
 - Customer churn
+- Customer complaints
 - Customer tenure
-- Complaints
 - Payment preferences
 - Order behaviour
-- Customer satisfaction
 - Coupon usage
+- Customer satisfaction
 - Cashback
+- App usage
 - Warehouse-to-home distance
 - Customer returns
 
-The project follows a structured data-analysis workflow from **data cleaning to business-oriented SQL analysis**.
+The project was completed as a structured SQL workflow consisting of:
 
----
-
-## 🎯 Project Objectives
-
-The main objectives of this project are to:
-
-- Clean and prepare the customer churn dataset.
-- Handle missing values using mean and mode imputation.
-- Remove specified outlier records.
-- Standardize inconsistent categorical values.
-- Transform and rename database columns.
-- Create meaningful customer status fields.
-- Perform SQL-based business analysis.
-- Analyze customer behaviour and churn-related patterns.
-- Create a customer returns table.
-- Perform relational joins between customer and return data.
-- Verify the final database and analysis workflow.
-
----
-
-## 🗂️ Dataset
-
-The project uses the supplied **E-Commerce Customer Churn dataset**.
-
-### Major Attributes
-
-| Category | Attributes |
-|---|---|
-| Customer | CustomerID, Gender, MaritalStatus |
-| Churn | ChurnStatus, ComplaintReceived |
-| Customer Behaviour | Tenure, OrderCount, CouponUsed |
-| Device | PreferredLoginDevice, NumberOfDeviceRegistered |
-| Location | CityTier, WarehouseToHome |
-| Payment | PreferredPaymentMode |
-| Orders | PreferredOrderCat, OrderAmountHikeFromlastYear |
-| Engagement | HoursSpentOnApp, DaySinceLastOrder |
-| Satisfaction | SatisfactionScore |
-| Value | CashbackAmount |
-
----
-
-# 🧹 Data Cleaning
-
-The following data-cleaning operations were implemented using SQL.
-
-### Missing Value Treatment
-
-Mean imputation was applied to:
-
-- `WarehouseToHome`
-- `HourSpendOnApp`
-- `OrderAmountHikeFromlastYear`
-- `DaySinceLastOrder`
-
-Mode imputation was applied to:
-
-- `Tenure`
-- `CouponUsed`
-- `OrderCount`
-
-The rounded mean value of `DaySinceLastOrder` was verified as **4**.
-
-### Outlier Removal
-
-Customer records with:
-
-```sql
-WarehouseToHome > 100
+```text
+Raw Dataset
+     ↓
+Database Creation
+     ↓
+Data Cleaning
+     ↓
+Missing Value Treatment
+     ↓
+Outlier Removal
+     ↓
+Data Standardization
+     ↓
+Data Transformation
+     ↓
+17 Business Analysis Queries
+     ↓
+Customer Returns Analysis
+     ↓
+JOIN Operations
+     ↓
+Final Verification
